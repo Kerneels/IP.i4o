@@ -9,6 +9,7 @@ TestResult.xml
 *.csproj.user
 *.sqp
 *~
+*.swp
 
 packages/
 src/Tests*/
