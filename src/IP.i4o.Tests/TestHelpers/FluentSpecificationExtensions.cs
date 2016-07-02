@@ -1,10 +1,10 @@
 namespace IP.i4o.Tests
 {
-	using NUnit.Framework;
-	using System;
-	using System.Collections;
+    using NUnit.Framework;
+    using System;
+    using System.Collections;
 
-	public delegate object MethodThatThrows();
+    public delegate object MethodThatThrows();
 
 	public static partial class FluentSpecificationExtensions
 	{
@@ -61,13 +61,13 @@ namespace IP.i4o.Tests
 
 		public static T ShouldBeOfType<T>(this T actual, Type expected)
 		{
-			Assert.IsInstanceOfType(expected, actual);
+			Assert.AreEqual(expected, actual.GetType());
 			return actual;
 		}
 
 		public static T ShouldNotBeOfType<T>(this T actual, Type expected)
 		{
-			Assert.IsNotInstanceOfType(expected, actual);
+			Assert.AreNotEqual(expected, actual.GetType());
 			return actual;
 		}
 
